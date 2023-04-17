@@ -1,0 +1,510 @@
+<style type="text/css">.keouNN .newSb {
+    position: static;
+}
+.apaga{
+display: none;
+}
+.newSb {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    box-direction: normal;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    box-align: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-style: normal;
+    font-family: museo-sans,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+.newSb {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-style: normal;
+    font-family: "museo-sans",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e7093e;
+    z-index: 99999;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    position: inherit;
+}
+.newSb * {
+    box-sizing: border-box;
+    line-height: 1;
+    color: #fff;
+    stroke: transparent;
+}
+.newSb__close button {
+    display: block;
+    line-height: 15px;
+    height: 45px;
+    width: 45px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    padding: 15px;
+    color: #fff;
+}
+.newSb__logo {
+        width: 46px;
+    height: 46px;
+    margin-right: 11px;
+    margin-left: 11px;
+    margin-top: -2px;
+    border-radius: 0;
+}
+.newSb__header {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.newSb__subheader {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+}
+.newSb__applink {
+    position: absolute;
+    right: 15px;
+    top: 27px;
+}
+.newSb__applink__btn {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+}</style>
+<div class="newSb" id="newSb" *ngIf="aberto">
+  <div class="newSb__close">
+    <button type="button" id="newSb_btn_close" data-target="#newSb" (click)="fecha()">
+      <svg style="fill: #fff;" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke-width="50" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15">
+        <path d="M7.5 7.03L0.47 0L0 0.48L7 7.5L0 14.53L0.47 15L7.5 7.98L14.5 15L15 14.53L7.98 7.5L15 0.48L14.5 0L7.5 7.03Z"></path>
+      </svg>
+    </button>
+  </div>
+  <img class="newSb__logo" [src]="image" alt="PedidosYa logo">
+  <div class="newSb__meta">
+    <header class="newSb__header">Nosso App</header>
+    <div class="newSb__rating"> <!-- SVG: Single star --><svg style="fill: yellow;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15"><path d="M0.4 5.13C0.23 5.15 0.08 5.27 0.02 5.44C-0.04 5.61 0.02 5.79 0.15 5.91C1.55 7.19 3.67 9.11 3.67 9.11C3.66 9.11 3.09 11.91 2.7 13.78C2.67 13.94 2.73 14.12 2.88 14.23C3.02 14.34 3.21 14.34 3.36 14.25C5.02 13.31 7.5 11.9 7.5 11.9C7.5 11.9 9.98 13.31 11.63 14.26C11.78 14.34 11.97 14.34 12.12 14.23C12.27 14.12 12.33 13.94 12.29 13.78C11.91 11.91 11.33 9.11 11.33 9.11C11.33 9.11 13.44 7.19 14.85 5.91C14.98 5.79 15.03 5.61 14.98 5.44C14.92 5.27 14.77 5.15 14.6 5.13C12.71 4.92 9.87 4.61 9.87 4.61C9.87 4.61 8.69 2 7.91 0.27C7.83 0.11 7.68 0 7.5 0C7.32 0 7.16 0.11 7.09 0.27C6.31 2 5.13 4.61 5.13 4.61C4.18 4.71 2.29 4.92 0.4 5.13Z"></path></svg><!-- SVG: Single star --><svg style="fill: yellow;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15"><path d="M0.4 5.13C0.23 5.15 0.08 5.27 0.02 5.44C-0.04 5.61 0.02 5.79 0.15 5.91C1.55 7.19 3.67 9.11 3.67 9.11C3.66 9.11 3.09 11.91 2.7 13.78C2.67 13.94 2.73 14.12 2.88 14.23C3.02 14.34 3.21 14.34 3.36 14.25C5.02 13.31 7.5 11.9 7.5 11.9C7.5 11.9 9.98 13.31 11.63 14.26C11.78 14.34 11.97 14.34 12.12 14.23C12.27 14.12 12.33 13.94 12.29 13.78C11.91 11.91 11.33 9.11 11.33 9.11C11.33 9.11 13.44 7.19 14.85 5.91C14.98 5.79 15.03 5.61 14.98 5.44C14.92 5.27 14.77 5.15 14.6 5.13C12.71 4.92 9.87 4.61 9.87 4.61C9.87 4.61 8.69 2 7.91 0.27C7.83 0.11 7.68 0 7.5 0C7.32 0 7.16 0.11 7.09 0.27C6.31 2 5.13 4.61 5.13 4.61C4.18 4.71 2.29 4.92 0.4 5.13Z"></path></svg><!-- SVG: Single star --><svg style="fill: yellow;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15"><path d="M0.4 5.13C0.23 5.15 0.08 5.27 0.02 5.44C-0.04 5.61 0.02 5.79 0.15 5.91C1.55 7.19 3.67 9.11 3.67 9.11C3.66 9.11 3.09 11.91 2.7 13.78C2.67 13.94 2.73 14.12 2.88 14.23C3.02 14.34 3.21 14.34 3.36 14.25C5.02 13.31 7.5 11.9 7.5 11.9C7.5 11.9 9.98 13.31 11.63 14.26C11.78 14.34 11.97 14.34 12.12 14.23C12.27 14.12 12.33 13.94 12.29 13.78C11.91 11.91 11.33 9.11 11.33 9.11C11.33 9.11 13.44 7.19 14.85 5.91C14.98 5.79 15.03 5.61 14.98 5.44C14.92 5.27 14.77 5.15 14.6 5.13C12.71 4.92 9.87 4.61 9.87 4.61C9.87 4.61 8.69 2 7.91 0.27C7.83 0.11 7.68 0 7.5 0C7.32 0 7.16 0.11 7.09 0.27C6.31 2 5.13 4.61 5.13 4.61C4.18 4.71 2.29 4.92 0.4 5.13Z"></path></svg><!-- SVG: Single star --><svg style="fill: yellow;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15"><path d="M0.4 5.13C0.23 5.15 0.08 5.27 0.02 5.44C-0.04 5.61 0.02 5.79 0.15 5.91C1.55 7.19 3.67 9.11 3.67 9.11C3.66 9.11 3.09 11.91 2.7 13.78C2.67 13.94 2.73 14.12 2.88 14.23C3.02 14.34 3.21 14.34 3.36 14.25C5.02 13.31 7.5 11.9 7.5 11.9C7.5 11.9 9.98 13.31 11.63 14.26C11.78 14.34 11.97 14.34 12.12 14.23C12.27 14.12 12.33 13.94 12.29 13.78C11.91 11.91 11.33 9.11 11.33 9.11C11.33 9.11 13.44 7.19 14.85 5.91C14.98 5.79 15.03 5.61 14.98 5.44C14.92 5.27 14.77 5.15 14.6 5.13C12.71 4.92 9.87 4.61 9.87 4.61C9.87 4.61 8.69 2 7.91 0.27C7.83 0.11 7.68 0 7.5 0C7.32 0 7.16 0.11 7.09 0.27C6.31 2 5.13 4.61 5.13 4.61C4.18 4.71 2.29 4.92 0.4 5.13Z"></path></svg><!-- SVG: Single star --><svg style="fill: yellow;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" width="15" height="15"><path d="M0.4 5.13C0.23 5.15 0.08 5.27 0.02 5.44C-0.04 5.61 0.02 5.79 0.15 5.91C1.55 7.19 3.67 9.11 3.67 9.11C3.66 9.11 3.09 11.91 2.7 13.78C2.67 13.94 2.73 14.12 2.88 14.23C3.02 14.34 3.21 14.34 3.36 14.25C5.02 13.31 7.5 11.9 7.5 11.9C7.5 11.9 9.98 13.31 11.63 14.26C11.78 14.34 11.97 14.34 12.12 14.23C12.27 14.12 12.33 13.94 12.29 13.78C11.91 11.91 11.33 9.11 11.33 9.11C11.33 9.11 13.44 7.19 14.85 5.91C14.98 5.79 15.03 5.61 14.98 5.44C14.92 5.27 14.77 5.15 14.6 5.13C12.71 4.92 9.87 4.61 9.87 4.61C9.87 4.61 8.69 2 7.91 0.27C7.83 0.11 7.68 0 7.5 0C7.32 0 7.16 0.11 7.09 0.27C6.31 2 5.13 4.61 5.13 4.61C4.18 4.71 2.29 4.92 0.4 5.13Z"></path></svg></div>
+    <span class="newSb__subheader">Baixar gratis</span>
+  </div>
+  <div class="newSb__applink">
+    <a class="newSb__applink__btn" href="">ABRIR</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+         body {
+         font-family: "Montserrat", sans-serif;
+
+         }
+
+
+
+
+         .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 50px 0 50px 0;
+         }
+         .art-board {
+         border-radius: 40px;
+         border: 6px solid black;
+         box-shadow: -30px 70px 150px -20px rgba(51, 51, 51, 0.25);
+         }
+         .art-board__container {
+         margin: 18px 0 18px 0;
+         width: 100%;
+        /* height: 812px;*/
+         overflow: auto;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         }
+         .card {
+         width: 280px;
+         overflow: hidden;
+         border-radius: 25px;
+         border: 1px solid lavender;
+         margin: 10px;
+         box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+         }
+         .card__image {
+         position: relative;
+         height: 140px;
+         }
+         .card__image > img {
+         max-width: 100%;
+         border-bottom-right-radius: 30px;
+         transform: rotate(10deg) translate(-10px, -55px);
+         position: absolute;
+         height: 200px;
+         object-fit: cover;
+         object-position: center;
+         }
+         .card__info {
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-between;
+         padding: 0px 30px 20px 30px;
+         }
+         .card__info h3 {
+         font-size: 18px;
+         font-weight: 700;
+         }
+         .card__info p {
+         font-size: 14px;
+         font-weight: 600;
+         }
+         .card__info--price {
+         text-align: right;
+         color: green;
+         font-size: 18px;
+         }
+         .rect2 {
+         position: relative;
+         bottom: 315px;
+         right: 15px;
+         width: 325px;
+         height: 230px;
+         border: 1px solid lavender;
+         border-radius: 0 0px 80px 0;
+         background-image: url();
+         transform: rotate(10deg);
+         object-fit: cover;
+         }
+         .checked {
+         color: #ffd700;
+         }
+
+         .busca1{
+             display: flex;
+         }
+
+         .busca{
+            display: none;
+         }
+
+         .card1 {
+         width: 280px;
+         overflow: hidden;
+         border-radius: 25px;
+         border: 1px solid lavender;
+         margin: 10px;
+         box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+         }
+        
+
+/*@media only screen and (max-width: 600px){
+        .card {
+             width: 43%;
+          }
+          .card__info--price{
+    display: none;
+      }
+      .card__info h3{
+             margin-top: 18px;
+             font-size: 13px;
+      }
+      .card__info p {
+    margin-bottom: 0;
+    font-size: 10px; 
+      }
+      .mb-0 {
+    font-size: 13px;
+ }
+ .busca{
+   display: none;
+ }
+ .busca1{
+   display: flex;
+ }
+ .card__info h3 {
+    font-size: 13px;
+}
+.card__info h3 {
+    font-size: 13px;
+}*/
+
+         
+      </style>
+          
+              
+
+   
+      <div class="" style="margin: 0;">
+
+         <div class="">
+            <div class="art-board__container">
+
+               <div class="card1 " style="  min-height: 154px;     border: 0; box-shadow: none; ">
+                <div class="card-header pb-0 text-left bg-transparent">
+                              <div class="col-auto" >
+            <div class="avatar avatar-xl" style="margin: 10px auto; align-items: center; display: block;">
+              <img style="border-radius: 74px; width: 74px;" [src]='image' alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+            </div>
+                  <h3 class="font-weight-bolder text-info text-gradient" style="text-align: center; background-image: linear-gradient(310deg, #cc2945, red);">{{vendedor.nomefantasia}}</h3>
+                  <p class="mb-0 gt">Buscar Produtos por Categoria</p>
+                  <select [(ngModel)]="tipo"  id="Tipo" 
+              name="Tipo" (change)="CarregaProdutoByVendedorAndTipo()"
+
+                      type="text" class="form-select w-100" placeholder="" aria-label="Password" aria-describedby="password-addon" style="margin-right: 10%; border: 0; padding: 0.5rem 1rem 0.5rem 0;">
+  <option selected value="Todos">Todos</option>
+  <option value="Hamburguer">Hamburguer</option>
+  <option value="Sushi">Sushi</option>
+  <option value="Pizza">Pizza</option>
+  <option value="Bolo">Bolo</option>
+    <option value="Sorvete">Sorvete</option>
+      <option value="Bebida">Bebida</option>
+        <option value="Pasteis">Pasteis</option>
+        <option value="Lanche">Lanche</option>
+        <option value="Massa">Massa</option>
+        <option value="Refeição">Refeição</option>
+        <option value="Higiene e limpeza do lar">Higiene e limpeza do lar</option>
+        <option value="Higiene e limpeza pessoal">Higiene e limpeza pessoal</option>
+        <option value="Perfumaria">Perfumaria</option>
+        <option value="Utilidades dom&#xe9;sticas">Utilidades dom&#xe9;sticas</option>
+        <option value="Campo e lazer">Campo e lazer</option>
+        <option value="Padaria">Padaria</option>
+        <option value="A&#xe7;ougue">A&#xe7;ougue</option>
+        <option value="Enlatados">Enlatados</option>
+        <option value="Doces">Doces</option>
+        <option value="Massas e biscoitos">Massas e biscoitos</option>
+        <option value="Cereais">Cereais</option>
+        <option value="Outros">Outros</option>
+         
+</select>
+<div class="input-group busca1">
+              <span class="input-group-text text-body" style="background: transparent;border: 0;"><i class="fas fa-search" aria-hidden="true" ></i></span>
+              <input (keyup)="BuscarProdutoByVendedorAndTipo()"  [(ngModel)]="nome1" name="nome1" id="nome1" type="text" class="form-control" placeholder="Buscar em {{tipo}}" style="border: 0; margin: 0; padding: 0;">
+            </div>
+                </div>
+             </div>
+          </div>
+
+               <div class="card busca">
+                  <div class="card__image">
+                     <img src="https://i.ibb.co/DWgzLGV/6501031.png" alt="Dessert" />
+                  </div>
+                  <div class="card__info" style="padding: 0px 10px 25px 10px;">
+                     <div class="car__info--title">
+                        <h3>&nbsp;</h3>
+<div class="card__info--price">
+                       <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body" style="background: transparent;border: 0;"><i class="fas fa-search" aria-hidden="true" ></i></span>
+              <input (keyup)="BuscarProdutoByVendedorAndTipo()"  [(ngModel)]="nome1" name="nome1" id="nome1" type="text" class="form-control" placeholder="Buscar em {{tipo}}" style="border: 0; margin: 0; padding: 0;">
+            </div>
+
+          </div>
+                     </div>
+                     </div>
+                     
+                  </div>
+               </div>
+
+
+
+               <div class="card" *ngFor="let x of produtos; let i = index" (click)="open(content,i )">
+                  <div class="card__image" >
+                     <img [src]='SafeUrl(x.files[0]?.data)' />
+                  </div>
+                  <div class="card__info">
+                     <div class="car__info--title">
+                        <h3 style="margin-top: 14px;">{{x.codigo}}</h3>
+                        <p>{{x.descricao}}</p>
+                     </div>
+                     <div class="card__info--price1" style="    position: absolute;
+    bottom: 13px;
+    right: 20px;">
+                        <span style="color: linear-gradient(310deg, #cc2945, red);; font-weight: bold; font-size: 18px;">R$ {{x.precoun}}</span>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+
+      <a *ngIf="cart" class="float-button bg-gradient-dark " target="_blank" (click)="Cart()">
+  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  <span  style="position: relative; 
+            top: -17px;
+    right: 9px;
+    padding: 0px 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    background: red;">{{ProdutosInCart?.length}}</span>
+</a>
+
+<style type="text/css">
+.float-button {
+        text-decoration: none;
+        position: fixed;
+        padding: 10px;
+        padding-right: 15px;
+        top: 5%;
+        right: -20px;
+        color: #fff;
+        border-radius:25px 30px 5px 25px;
+        z-index: 100;
+        font-family: Arial;
+        font-size: 17px;
+        animation: whatsapp-animation 0.5s ease-in-out;
+        transition:all 0.3s ease-out;
+    }
+
+    .float-button:hover {
+         background-color: #128C7E;
+          color: #fff;
+    }
+
+    .fa-shopping-cart {
+        font-size: 30px !important;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    @keyframes whatsapp-animation {
+        from {
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%
+        }
+    }
+
+   
+
+
+    </style>
+
+    <ng-template #content let-c="close" let-d="dismiss" style=" max-width: 50%; width: 30%; ">
+    
+    <div class="container">
+  <div class="card" style="border: 0;
+    margin: auto;
+    box-shadow: none;">
+    <img [src]='SafeUrl(produtose.files[0]?.data)' alt="" />
+    <div class="card-body">
+      <div class="row">
+        <div class="card-title">
+          <h4>{{produtose.codigo}}</h4>
+          <h3>R$ {{produtose.precoun}}</h3>
+        </div>
+        <div class="view-btn">
+        <div class="input-group" style="width: 40%;">
+              <span (click)="Changequantidade(-1)" class="input-group-text text-body" style="background: transparent;border: 0;"><i class="fa fa-arrow-left" aria-hidden="true" ></i></span>
+              <input disabled [(ngModel)]="quantidade" focus="false" name="nome1" id="nome1" type="text" class="form-control" placeholder="Qtd" style="border: 0; margin: 0; padding: 0; background: #fff;">
+               <span (click)="Changequantidade(1)" class="input-group-text text-body" style="background: transparent;border: 0;"><i class="fa fa-arrow-right" aria-hidden="true" ></i></span>
+            </div>
+        </div>
+      </div>
+      <hr />
+      <p>
+       {{produtose.descricao}}
+      </p>
+      <h5 style="    font-size: 18px !important; color: red;">TOTAL: R$ {{total}}</h5>
+      <div class="btn-group" style="    align-items: center;
+    margin: auto;
+    display: flex;">
+        <div class="btn" (click)="AddToCart()">
+          <a >Add ao Carrinho</a>
+        </div>
+      </div>
+      <div class="btn-group" style="    align-items: center;
+    margin: auto;
+    display: flex;">
+        
+        <div class="btn" (click)="GoToCart()">
+          <a >Comprar Agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </ng-template>
+
+    <app-footer1></app-footer1>
+
+  
