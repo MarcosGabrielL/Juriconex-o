@@ -52,7 +52,8 @@ import { CreatAccesstokenInAuthSuccessComponent } from './components/template/cr
 import { TrackpagamentoComponent } from './components/marketplaceweb/views/trackpagamento/trackpagamento.component';
 
 import { CartNotloggedComponent } from './components/marketplaceweb/views/cart-notlogged/cart-notlogged.component';
-
+import { IndexlegalComponent } from './components/template/pages/legal/indexlegal/indexlegal.component';
+import { GeneralTermsOfUseComponent } from './components/template/pages/legal/general-terms-of-use/general-terms-of-use.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,11 @@ const routes: Routes = [
     path: 'home',
     component: PortfolioComponent
    },
+   {
+    path: 'legal',
+    component: IndexlegalComponent
+   },
+    { path: 'legal/general-terms-of-use', component: GeneralTermsOfUseComponent, pathMatch: 'full'},
    {
     path: 'revendedor',
     component: RevendedorComponent
