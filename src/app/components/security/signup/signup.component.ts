@@ -13,7 +13,7 @@ import {
 
 
 @Component({
-  selector: 'app-signup',
+  selector: 'app-signup', 
   templateUrl: './signup.component.html',
   styleUrls: ['../../../../app/app.component.css']
 })

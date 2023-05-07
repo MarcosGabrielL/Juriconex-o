@@ -91,6 +91,7 @@ import { LoginClientComponent } from './components/security/login-client/login-c
 import { RevendedorTransacoesComponent } from './components/marketplaceweb/views/revendedor-transacoes/revendedor-transacoes.component';
 import { GeneralTermsOfUseComponent } from './components/template/pages/legal/general-terms-of-use/general-terms-of-use.component';
 import { IndexlegalComponent } from './components/template/pages/legal/indexlegal/indexlegal.component';
+import { HeaderHomeComponent } from './components/template/header-home/header-home.component';
 
 @NgModule({
   declarations: [
@@ -149,7 +150,8 @@ import { IndexlegalComponent } from './components/template/pages/legal/indexlega
     LoginClientComponent,
     RevendedorTransacoesComponent,
     GeneralTermsOfUseComponent,
-    IndexlegalComponent
+    IndexlegalComponent,
+    HeaderHomeComponent
   ],
   imports: [
     BrowserModule,
