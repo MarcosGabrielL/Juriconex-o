@@ -115,7 +115,7 @@ const routes: Routes = [
    {
     path: 'billing',
     component: BillingComponent,
-    canActivate: [ HttpInterceptorService ]
+    //canActivate: [ HttpInterceptorService ]
    },
    {
     path: 'billing/creat',
