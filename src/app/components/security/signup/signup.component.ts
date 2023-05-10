@@ -33,11 +33,13 @@ export class SignupComponent implements OnInit {
   passwordreg : string = "";
   firstName : string = "";
   lastName : string = "  ";
+  oab: string = "";
 
    errorMessage = 'Invalid Credentials';
   successMessage: string = "";
    invalidLogin = false;
   loginSuccess = false;
+  isAdvogado = "";
   tipo: String= "1";
 
      authRequestreg:any ={

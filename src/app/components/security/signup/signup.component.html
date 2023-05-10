@@ -72,7 +72,8 @@
             <div class="card-body">
               <form role="form text-left">
                 <div class="form-check form-check-info text-left">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input class="form-check-input" type="checkbox" [(ngModel)]="isAdvogado" id="souadvogado" #checkBox>
+    
                   <label class="form-check-label" for="flexCheckDefault">
                    <a>Sou Advogado</a>
                   </label>
@@ -83,11 +84,11 @@
 
                   type="email" class="form-control" placeholder="Nome Completo" aria-label="Email" aria-describedby="email-addon">
                 </div>
-                 <div class="mb-3">
-                  <input  for="emailreg" id="emailreg" [(ngModel)]="emailreg"
-              name="emailreg"
+                 <div  *ngIf="checkBox.checked" (change)="true" class="mb-3">
+                  <input  for="oab" id="oab" [(ngModel)]="oab"
+              name="oab"
 
-                  type="email" class="form-control" placeholder="Nº da OAB" aria-label="Email" aria-describedby="email-addon">
+                  type="email" class="form-control" placeholder="Nº da OAB" aria-label="Nº da OAB" aria-describedby="email-addon">
                 </div>
                 <div class="mb-3">
                   <input  for="emailreg" id="emailreg" [(ngModel)]="emailreg"
@@ -104,10 +105,10 @@
 
 
 
-
+     
 
                 <div class="form-check form-check-info text-left" style="margin-top: 15%;">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
                   <label class="form-check-label" for="flexCheckDefault">
                     Eu conconrdo com os <a href="javascript:;" class="text-dark font-weight-bolder">Termos e Condições</a>
                   </label>
