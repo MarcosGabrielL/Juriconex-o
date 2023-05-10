@@ -10,7 +10,7 @@ import {LoginService} from './components/security/login.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'emiele';
+  title = 'Jurisconexão';
 
 mostranotify: boolean = false;
  vendedor_id: String = "";

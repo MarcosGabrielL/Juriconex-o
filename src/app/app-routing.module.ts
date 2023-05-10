@@ -98,7 +98,7 @@ const routes: Routes = [
    {
     path: 'index',
     component: DashboardComponent,
-    canActivate: [ HttpInterceptorService ]
+   // canActivate: [ HttpInterceptorService ]
    },
    {
     path: 'profile',
@@ -124,7 +124,7 @@ const routes: Routes = [
    {
     path: 'tables',
     component: TableComponent,
-    canActivate: [ HttpInterceptorService ]
+    //canActivate: [ HttpInterceptorService ]
    },
    {
     path: 'confirm',
