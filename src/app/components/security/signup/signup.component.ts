@@ -4,6 +4,7 @@ import { LoginService } from '../login.service';
 import { RegisterService } from '../register.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { VerifyemailService } from '../verifyemail.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import {
   getSupportedInputTypes,
   Platform,
@@ -24,9 +25,11 @@ export class SignupComponent implements OnInit {
     private router: Router,
     private authenticationService: LoginService,
     private registerService: RegisterService,
-    public platform: Platform
-    ,
+    public platform: Platform,
+    private formBuilder: FormBuilder,
     public verifyemailservice: VerifyemailService) { }
+
+
 
   //Register Components
     emailreg: string = "";
@@ -39,7 +42,7 @@ export class SignupComponent implements OnInit {
   successMessage: string = "";
    invalidLogin = false;
   loginSuccess = false;
-  isAdvogado = false;
+  isAdvogado: boolean;
   tipo: String= "1";
 
      authRequestreg:any ={
@@ -55,11 +58,24 @@ export class SignupComponent implements OnInit {
     "password":"pass"
   };
 
+    form: FormGroup;
+
   ngOnInit(): void {
-     this.title.setTitle('Emiele | Cadastro');
+     this.title.setTitle('Jurisconexao | Cadastro');
+       this.form = this.formBuilder.group({
+      isAdvogado: [false] // Set the initial value of the checkbox here
+    });
   }
 
    handleRegistration() {
+
+    if( this.form.get('isAdvogado')?.value){
+          this.tipo = "1"
+          console.log("isAdvogado 1: "+ this.form.get('isAdvogado')?.value);
+        }else{
+          this.tipo = "3"
+            console.log("isAdvogado 3: "+ this.form.get('isAdvogado')?.value);
+        }
     
     this.authRequestRegister={
     "email":this.emailreg,
@@ -78,11 +94,7 @@ export class SignupComponent implements OnInit {
        //// console.log(this.authRequestRegister);
     this.registerService.registration(this.authRequestRegister).subscribe((result)=> {
         this.successMessage = 'Cadastro com sucesso';
-        if( this.isAdvogado){
-          this.tipo = "1"
-        }else{
-          this.tipo = "3"
-        }
+        
         this.authenticationService.mensagem(this.successMessage); 
             this.authenticationService.authenticationService(this.authRequestreg).subscribe((result)=> {
               localStorage.setItem('this.TOKEN_SESSION_ATTRIBUTE', result+'');
