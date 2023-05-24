@@ -71,10 +71,8 @@ export class SignupComponent implements OnInit {
 
     if( this.form.get('isAdvogado')?.value){
           this.tipo = "1"
-          console.log("isAdvogado 1: "+ this.form.get('isAdvogado')?.value);
         }else{
           this.tipo = "3"
-            console.log("isAdvogado 3: "+ this.form.get('isAdvogado')?.value);
         }
     
     this.authRequestRegister={
@@ -109,12 +107,12 @@ export class SignupComponent implements OnInit {
                 this.authenticationService.mensagem(this.successMessage);
                 if(this.tipo === "1"){
 
-                 this.router.navigate(['/cadastrar/payment']);
+                 this.router.navigate(['/index']);///cadastrar/payment
               } if(this.tipo === "2"){
                     this.router.navigate(['/revendedor/perfil']);
               }if(this.tipo === "3"){
                   
-                this.router.navigate(['/shop/pedidos/'+this.emailreg]);
+                this.router.navigate(['/cadastrar/payment']);///shop/pedidos/'+this.emailreg]
                 }
               }, () => {
               });
