@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
   successMessage: string = "";
    invalidLogin = false;
   loginSuccess = false;
-  isAdvogado = "";
+  isAdvogado = false;
   tipo: String= "1";
 
      authRequestreg:any ={
@@ -78,6 +78,11 @@ export class SignupComponent implements OnInit {
        //// console.log(this.authRequestRegister);
     this.registerService.registration(this.authRequestRegister).subscribe((result)=> {
         this.successMessage = 'Cadastro com sucesso';
+        if( this.isAdvogado){
+          this.tipo = "1"
+        }else{
+          this.tipo = "3"
+        }
         this.authenticationService.mensagem(this.successMessage); 
             this.authenticationService.authenticationService(this.authRequestreg).subscribe((result)=> {
               localStorage.setItem('this.TOKEN_SESSION_ATTRIBUTE', result+'');
@@ -86,6 +91,7 @@ export class SignupComponent implements OnInit {
                 this.loginSuccess = true;
                 this.authenticationService.createBasicAuthToken(this.emailreg, this.passwordreg);
                 this.authenticationService.registerSuccessfulLogin(this.emailreg, this.passwordreg, this.tipo);
+               
                 this.successMessage = 'Login com sucesso';
                 this.sendEmail();
                 this.authenticationService.mensagem(this.successMessage);

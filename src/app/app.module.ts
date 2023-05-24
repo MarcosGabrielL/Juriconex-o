@@ -92,6 +92,9 @@ import { RevendedorTransacoesComponent } from './components/marketplaceweb/views
 import { GeneralTermsOfUseComponent } from './components/template/pages/legal/general-terms-of-use/general-terms-of-use.component';
 import { IndexlegalComponent } from './components/template/pages/legal/indexlegal/indexlegal.component';
 import { HeaderHomeComponent } from './components/template/header-home/header-home.component';
+import { ChatComponent } from './components/template/chat/chat.component';
+import { SolicitacoesComponent } from './components/template/solicitacoes/solicitacoes.component';
+import { InfoSolicitacoesComponent } from './components/template/info-solicitacoes/info-solicitacoes.component';
 
 @NgModule({
   declarations: [
@@ -151,7 +154,10 @@ import { HeaderHomeComponent } from './components/template/header-home/header-ho
     RevendedorTransacoesComponent,
     GeneralTermsOfUseComponent,
     IndexlegalComponent,
-    HeaderHomeComponent
+    HeaderHomeComponent,
+    ChatComponent,
+    SolicitacoesComponent,
+    InfoSolicitacoesComponent
   ],
   imports: [
     BrowserModule,

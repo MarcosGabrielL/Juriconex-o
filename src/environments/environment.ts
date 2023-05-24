@@ -5,7 +5,7 @@
 export const environment = {
   production: false
   ,
-   baseUrl : 'https://emiele-service-gerenciador.herokuapp.com',
+   baseUrl : 'https://jurisconexao-service-auth-production.up.railway.app',
    baseUrlVendas : 'https://emiele-service-gerenciador.herokuapp.com',
    AppID: "3843631125520319",
    SECRET_KEY: "nL7zr0VyFOtgUQu4YEmR4xYSMOgqLStz",

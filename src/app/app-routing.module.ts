@@ -145,7 +145,7 @@ const routes: Routes = [
    {
     path: 'produtos',
     component: ProdutoComponent,
-    canActivate: [ HttpInterceptorService ],
+   // canActivate: [ HttpInterceptorService ],
         children: [
                     {path: 'gerencia',  component:GerenciaProdutoComponent , pathMatch: 'full'},
                      {path: 'home', component: ListaComponent, pathMatch: 'full'}
